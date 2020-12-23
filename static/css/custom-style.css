@@ -1,0 +1,54 @@
+.big-banner{
+	background-image: url('../images/table.jpg')
+
+}
+
+
+
+.form-rounded {
+border-radius: 1.5rem;
+border-width: 4px;
+width: 250px;
+}
+
+.search-rounded {
+border-radius: 1.5rem;
+border-width: 4px;
+width: 1113px;
+}
+
+.suggestion-rounded {
+border-radius: 1.5rem;
+border-width: 1px;
+width: 1113px;
+}
+
+
+
+.square-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  position: relative;
+  flex-basis: calc(33.333% - 10px);
+  margin: 5px;
+  border: 0px solid;
+  box-sizing: border-box;
+}
+
+.square::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.square .content {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
