@@ -2,9 +2,9 @@
 The project aims to support web-based shopping of apparels by catering to the need of trying out an apparel virtually on a user to validate that it meets his/her requirement. This involves developing a web application which will accept an image of the person who is trying to buy the apparel and image of the desired apparel. The application will use the contour of the person buying the apparel and will generate the image of the person with the desired apparel fitted to his/her body. The project will give users the ability to try clothes they wish to buy without going to a shop in person.
 
 ## Results
-Results on trained data
+### Results on trained data
 ![alt text](https://github.com/BisheshS/Virtual-Clothes-TryOn/blob/main/output1.png?raw=true)
-Results on real data taken from webcam
+### Results on real data taken from webcam
 ![alt text](https://github.com/BisheshS/Virtual-Clothes-TryOn/blob/main/output2.png?raw=true)
 ![alt text](https://github.com/BisheshS/Virtual-Clothes-TryOn/blob/main/output3.png?raw=true)
 
