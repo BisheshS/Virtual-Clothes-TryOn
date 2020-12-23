@@ -1,0 +1,1226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+   	<meta charset="utf-8">
+   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  	<meta content="" name="keywords">
+  	<meta content="" name="description">
+  	<!-- Favicons -->
+  	<link href="{{ url_for('static',filename='images/favicon.png') }}"  rel="icon">
+  	<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script> 
+   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+   	
+   	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   	<!--<link rel="stylesheet" type="text/css" href="css/glyphicon.css"> -->
+   	<link rel="stylesheet"  href="{{ url_for('static',filename='css/mycss.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+	<!--<link href="css/bootstrap.css" rel="stylesheet"> -->
+
+	<!-- Libraries CSS Files -->
+  	<link href="{{ url_for('static',filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  	<link href="{{ url_for('static',filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+
+  	<!-- Main Stylesheet File -->
+  	<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+
+
+
+
+    <!-- <link href="{{ url_for('static',filename='css/birds.css') }}" rel="stylesheet"> -->
+
+
+  	<!-- JavaScript Libraries -->
+  <script src="{{ url_for('static',filename='lib/jquery/jquery.min.js') }}" src="lib/jquery/jquery.min.js"></script>
+  <script src="{{ url_for('static',filename='lib/jquery/jquery.min.js') }}"		src="lib/jquery/jquery-migrate.min.js"></script>
+  <!-- <script src="{{ url_for('static',filename='lib/jquery/jquery.min.js') }}"		src="lib/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="{{ url_for('static',filename='lib/easing/easing.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='lib/wow/wow.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='lib/waypoints/waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='lib/counterup/counterup.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='lib/superfish/hoverIntent.js') }}"	></script>
+  <script src="{{ url_for('static',filename='lib/superfish/superfish.min.js') }}"></script>
+  <!--<script src="{{ url_for('static',filename='js/camera.js') }}"></script> -->
+
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+ 
+
+  
+
+	<script type="text/javascript">
+		function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img1, #fimg1, #mimg1')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script> 
+    <script type="text/javascript">
+		function readURL2(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img2, #fimg2, #mimg2')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+       </script>
+     
+    <script type="text/javascript">
+    	function success(){
+    		var succ = document.getElementById('success');
+        succ.style.display = "block";
+        setTimeout(function(){
+          succ.style.display = "none";
+        }, 5000);
+			}
+		</script>
+		<script>
+			function learned1(){
+    		var lrnd1 = document.getElementById('learned1');
+        lrnd1.style.display = "block";
+        setTimeout(function(){
+          lrnd1.style.display = "none";
+        }, 5000);
+			}
+		</script>
+		<script>
+			function learned2(){
+    		var lrnd2 = document.getElementById('learned2');
+        lrnd2.style.display = "block";
+        setTimeout(function(){
+          lrnd2.style.display = "none";
+        }, 5000);
+			}
+
+    </script>
+    
+    <script type="text/javascript">
+    	function findSize() {
+    		var height = document.getElementById('height').value; 
+    		if (height == "")
+    			swal("Please enter a number");
+    		else if (isNaN(height))
+    			swal("Please enter a number");
+    		else if (height <= 150)
+    			swal("Wear Small!");
+    		else if (height >= 150 && height <= 180)
+    			swal("Wear Medium!");
+    		else if (height >= 180)
+    			swal("Wear Large!");
+    	}
+    		
+    </script>
+    <script>
+          window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    }
+
+     </script> 
+    
+    
+    <script>
+      function disp1anim(){
+        var btn1 = document.getElementById("btn1");
+        btn1.classList.add("lightSpeedIn");
+        var sizefind = document.getElementById("sizefind");
+        sizefind.classList.add("fadeInLeft");  
+         var img1 = document.getElementById("img1");
+         img1.classList.add("zoomIn"); 
+         setTimeout(function() {
+          btn1.classList.remove('lightSpeedIn');
+          sizefind.classList.remove('fadeInLeft');
+          img1.classList.remove("zoomIn");
+          }, 5000); 
+      
+      }
+    </script>
+    <script>
+      function disp2anim(){
+        var btn2 = document.getElementById("btn2");
+        btn2.classList.add("lightSpeedIn");
+         var img2 = document.getElementById("img2");
+         img2.classList.add("zoomIn");
+         var hdisp2 = document.getElementById("hdisp2");
+         hdisp2.classList.add("rubberBand");
+
+          setTimeout(function() {
+          btn2.classList.remove('lightSpeedIn');
+          img2.classList.remove("zoomIn");
+          hdisp2.classList.remove("rubberBand");
+          }, 5000);
+      }
+    </script>
+    <script>
+      function disp3anim(){
+        var btn3 = document.getElementById("btn3");
+        btn3.classList.add("lightSpeedIn");
+        var btn4 = document.getElementById("btn4");
+        btn4.classList.add("lightSpeedIn");
+         var img3 = document.getElementById("img3");
+         img3.classList.add("zoomIn"); 
+          var img4 = document.getElementById("img4");
+         img4.classList.add("zoomIn");
+         var mimg1 = document.getElementById("mimg1");
+         mimg1.classList.add("zoomIn");
+         var mimg2 = document.getElementById("mimg2");
+         mimg2.classList.add("zoomIn");
+         var btn5 =  document.getElementById("btn5");
+        btn5.classList.add("lightSpeedIn");
+        var hdisp3 = document.getElementById("hdisp3");
+         hdisp3.classList.add("rubberBand");
+
+          setTimeout(function() {
+          btn3.classList.remove('lightSpeedIn');
+          btn4.classList.remove('lightSpeedIn');
+          btn5.classList.remove('lightSpeedIn');
+          img3.classList.remove('zoomIn');
+          img4.classList.remove("zoomIn");
+          mimg1.classList.remove("zoomIn");
+          mimg2.classList.remove("zoomIn");
+          hdisp3.classList.remove("rubberBand");
+
+          }, 5000);
+      }
+    </script>
+    <script>
+      function disp4anim(){
+        var btn6 = document.getElementById("btn6");
+        btn6.classList.add("lightSpeedIn");
+         var img5 = document.getElementById("img5");
+         img5.classList.add("zoomIn");
+         var fimg1 = document.getElementById("fimg1")
+         fimg1.classList.add("zoomIn");
+         var fimg2 = document.getElementById("fimg2")
+         fimg2.classList.add("zoomIn");
+         var hdisp4 = document.getElementById("hdisp4");
+         hdisp4.classList.add("rubberBand");
+         setTimeout(function() {
+          btn6.classList.remove('lightSpeedIn');
+          img5.classList.remove("zoomIn");
+          fimg1.classList.remove("zoomIn");
+          fimg2.classList.remove("zoomIn");
+          hdisp4.classList.remove("rubberBand");
+          }, 5000);
+      }
+    </script>
+    <script>
+      function camanim(){
+        var video = document.getElementById("video");
+        video.classList.add("zoomIn");
+        var photo = document.getElementById("photo");
+        photo.classList.add("zoomIn");
+        var snapupld = document.getElementById("snapupld");
+        snapupld.classList.add("lightSpeedIn");
+        var startbutton = document.getElementById("startbutton");
+        startbutton.classList.add("lightSpeedIn");
+        setTimeout(function() {
+          snapupld.classList.remove('lightSpeedIn');
+          startbutton.classList.remove('lightSpeedIn');
+          video.classList.remove("zoomIn");
+          photo.classList.remove("zoomIn");
+          }, 5000);
+      }
+    </script>
+    <script type=text/javascript>
+
+  (function() {
+  // The width and height of the captured photo. We will set the
+  // width to the value defined here, but the height will be
+  // calculated based on the aspect ratio of the input stream.
+
+  var width = 480;    // We will scale the photo width to this
+  var height = 520;     // This will be computed based on the input stream
+
+  // |streaming| indicates whether or not we're currently streaming
+  // video from the camera. Obviously, we start at false.
+
+  var streaming = false;
+
+  // The various HTML elements we need to configure or control. These
+  // will be set by the startup() function.
+
+  var video = null;
+  var canvas = null;
+  var photo = null;
+  var startbutton = null;
+
+  function startup() {
+    video = document.getElementById('video');
+    canvas = document.getElementById('canvas');
+    photo = document.getElementById('photo');
+    startbutton = document.getElementById('startbutton');
+
+    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    .then(function(stream) {
+      video.srcObject = stream;
+      video.play();
+    })
+    .catch(function(err) {
+      console.log("An error occurred: " + err);
+    });
+
+    video.addEventListener('canplay', function(ev){
+      if (!streaming) {
+        height = video.videoHeight / (video.videoWidth/width);
+      
+        // Firefox currently has a bug where the height can't be read from
+        // the video, so we will make assumptions if this happens.
+      
+        if (isNaN(height)) {
+          height = width / (4/3);
+        }
+      
+        video.setAttribute('width', width);
+        video.setAttribute('height', height);
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
+        streaming = true;
+      }
+    }, false);
+
+    startbutton.addEventListener('click', function(ev){
+      takepicture();
+      ev.preventDefault();
+    }, false);
+    
+    clearphoto();
+  }
+
+  // Fill the photo with an indication that none has been
+  // captured.
+
+  function clearphoto() {
+    var context = canvas.getContext('2d');
+    context.fillStyle = "#AAA";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    var data = canvas.toDataURL('image/jpeg');
+    photo.setAttribute('src', data);
+  }
+  
+  // Capture a photo by fetching the current contents of the video
+  // and drawing it into a canvas, then converting that to a PNG
+  // format data URL. By drawing it on an offscreen canvas and then
+  // drawing that to the screen, we can change its size and/or apply
+  // other changes before drawing it.
+
+  function takepicture() {
+    var context = canvas.getContext('2d');
+    if (width && height) {
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
+    
+      var data_img = canvas.toDataURL('image/jpeg');
+      $.ajax({
+        type: "POST",
+        url: "/save",
+        data:{
+          imageBase64: data_img
+        }
+      }).done(function() {
+        console.log('sent');
+      });
+     
+      console.log(data_img);
+      photo.setAttribute('src', data_img);
+    } else {
+      clearphoto();
+    }
+  }
+
+  // Set up our event listener to run the startup process
+  // once loading is complete.
+  window.addEventListener('load', startup, false);
+})();
+</script>
+
+	
+    <title> Main </title> 
+
+   </head>	
+	<body> <!-- style="background-image: url({{ url_for('static', filename='.jpg') }}); background-size: 1000px; background-repeat: no repeat"> -->
+	<header id="header">
+   <div class="container">
+
+      <!--<div id="logo" class="pull-left">
+        <a href="#hero"><img src="{{ url_for('static',filename='images/logo.png') }}" height="90" width="160" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
+      <!--</div> -->
+      
+
+      <a href="#page-top" class="navbar-brand"> <h3 class="animated bounceInDown" style="font-family: 'Bungee Shade', cursive; text-align:left; font-size: 145%; color: white;"> <b> Vestment <b> </h3>  </a>
+      
+      <!--<a class="navbar-brand" href="#"> -->
+        <img class="animated bounceInDown delay-1s rounded-circle" src="static/images/fashion.png" alt="Vestment-logo" width="38" height="38" style="position: absolute; left: 34%; margin-left: -50px; margin-bottom: 10000px; " >
+    
+      <!--</a>-->
+  
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <!--<li><a href="#about">About Us</a></li> -->
+          <!--<li><a href="#services">Services</a></li> 
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#team">Team</a></li>
+          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="#contact">Contact Us</a></li> -->
+     
+      </nav><!-- #nav-menu-container -->
+    </div>
+  	</header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" style="/*background: url(static/images/hero-bg.jpg) top center; background-attachment: fixed;"> 
+    <div class="hero-container"> 
+     <!-- <div class="container" style="background-image: url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');"> -->
+        <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+      <h1 class="animated tada slow" style="animation-duration: 2s; font-family: 'Bungee', cursive; font-size: 72px ;text-shadow: 0px 3px 0px /*#b2a98f*/ grey	,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); color: white">Welcome to Vestment</h1>
+                 <br>
+      <h2 class="animated bounceInDown delay-1s " style="animation-duration: 1s; font-family: 'PT Sans', sans-serif; color:white;">Now you can try the clothes you wish to wear in comfort of your home </h2>
+      <div style="display:inline;" class="animated bounceInUp delay-2s" >
+      <!--<label for="chooseimg"  class="btn-get-started" style="font-family: 'PT Sans', sans-serif ; font-size: 20px"> Choose your picture then <a href="#display1" onclick="disp1anim()" style="font-family: 'PT Sans', sans-serif; font-size: 20px "> click here! </a> </label>-->
+      <a href="#display1" onclick="disp1anim()" class="btn-get-started" style="font-family: 'PT Sans', sans-serif; font-size: 20px ">Choose your picture</a>
+      <!-- <input type="file" id="chooseimg" href="#display1" name=photo capture=camera class="filestyle" style="display: none" data-icon="false" onchange="readURL(this);" /> -->
+      <a href="#cam"  onclick="camanim()" class="btn-get-started" style="font-family: 'PT Sans', sans-serif; font-size: 20px ">Take your picture</a>
+      </div>
+      <!--<button type="button" class="btn btn-dark" onclick="smoothScroll(document.getElementById('display')); divanimate()"> Get started </button> -->
+
+
+    </div>
+    
+  </section><!-- #hero -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================
+    <section id="about">
+      <div class="container">
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">Few Words About Us</h2>
+            <p>
+              We are from PES
+            </p>
+
+            <div class="icon-box wow fadeInUp">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">Hello</a></h4>
+              <p class="description"></p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-photo"></i></div>
+              <h4 class="title"><a href="">Hello</a></h4>
+              <p class="description"></p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Hello</a></h4>
+              <p class="description"></p>
+            </div>
+
+          </div>
+
+          <!-- <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div> 
+        </div>
+
+      </div>
+    </section> #about -->	
+  
+		
+			<section id="display1" style="/*background-color: #23A6D5*/; height: 100vh;" class="displayone" style="background: url(static/images/hero-bg.jpg) top center; background-attachment: fixed;"> <!-- class="square-container mt-5"> -->
+        <br>
+        <br>
+      
+        <div style="text-align:center" id="sizefind" class="animated delay-1s">
+        <form>
+                <div class="container mb-5">
+                <div class="form-group mb-0 col-3" style="text-align:center">
+                <input type="text" align="center" class="form-control" id="height" style="font-size: 20px" placeholder="Enter Height (in cms)">
+                <br>  
+                <input type="button" onclick = "findSize()" class="btn btn-light" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"  value= "Suggest size"/> 
+              </div>
+              </div>
+        </form>
+        </div>
+      
+  			<div class="square"> <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+  				
+      			<div class="content" style="width=500px; height=500px">
+    				<section>
+    					<div class="mt-5" style="text-align:center">
+    						<br>
+    						<!--<span  class="glyphicon glyphicon-pencil"  style="font-size: 75px; color:red; "></span>-->
+    						<div>	
+    						<img id="img1" src="http://clipart-library.com/images/riLo4pBoT.jpg" alt="my image" class="animated delay-1s slow" style="width:240px; height:300px; margin-top: 40px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" />
+               <!-- http://www.see-it-3d.co.uk/demo/wp-content/uploads/2012/08/2016-11-10_11h28_13.png -->
+                </div>
+    						<div class="container mt-5 mb-5" style="margin-top: 1px;" >
+    						<!--<div style="margin-top: 5px;">	-->
+    							<p class="mt-5" align="center" style="font-size:20px; font-family: 'PT Sans', sans-serif"><b>Image you chose</b></p>
+    						</div>
+    						<div class="form-group mt-0 animated delay-1s" id="btn1">
+                  <form method=POST enctype=multipart/form-data action="{{ url_for('upload1') }}" >
+                  			<label for="f1" class="btn btn-light" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);font-size:20px; margin-right: 180px; margin-top: 7.5px">Choose Image</label>
+        					<input id="f1" type="file" name=photo capture=camera class="filestyle" style="display:none" data-icon="false" onchange="readURL(this);" />
+    							<!--<button type="button" class="btn btn-dark "> Upload </button> -->
+                  <input type="submit" class="btn btn-light" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); " value="Accept">
+                  <br>
+                  </form>
+    							<!--<button type="button" onclick = "opencam()" class="btn btn-dark"> Open camera </button> 
+    							<div id="opencam" style="display:none;" align="center">
+    								<video id="video" width="640" height="480" autoplay></video>
+									<button id="snap">Click Photo</button>
+									<canvas id="canvas" width="640" height="480"></canvas> -->
+                  <!--<button type="button" onclick="smoothScroll(document.getElementById('camera'))" class="btn btn-dark"> Open camera </button> --> 
+                   <!--<a href="#camera" style="border:solid;""> Camera </a> -->
+    						</div>
+    					</div>		
+    				</section>
+            </div>
+    		
+    			</div>
+
+
+       <!-- <div class="square">  <!-- style="width: 500px; float:left; height:500px; margin:100px"> 
+        
+          <div class="content spread" >
+            <section>
+              <div class="mt-5" style="text-align:center">
+                <br>
+
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-
+                <div class="has-animation animation-rtl" data-delay="2000">
+                <img id="img2" src="https://via.placeholder.com/360x350.png?text=Please+choose+wisely!" alt="apparel you want" style="width:360px; height:350px;"/>
+                </div>
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -
+                <p class="mt-5" align="center"> <b>Upload image of apparel you want to try on</b></p>
+                <br>
+                <div class="form-group mt-0 align-items-center" align="center">
+                    <input type="file" class="filestyle" data-icon="true" onchange="readURL2(this);" />
+                    <button type="button" class="btn btn-dark"> Generate </button> 
+                  </div>
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div> -->
+
+        <div class="arrow bounce" style="width: 100px; height: 100px; position: absolute; left: 50%; margin-left: -50px; margin-top: 40px">
+          <a  class="fa fa-arrow-down fa-3x" href="#display2" onclick="disp2anim()" ></a>
+          <!--<h4> Please click here! </h4> -->
+        </div>
+        
+       </section> 
+       <section class="camera" id= "cam" style = "background-color: #23A6D5; height: 100vh;">
+                             <div>
+        <div>
+        <div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-left: 330px; margin-top: 170px;"> 
+        
+          <div class="content spread" style="width=500px; height=500px">
+            <section>
+              <div class="mt-5" style="text-align:center; width: 340px;">
+                
+
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+                
+                <video id="video" style="position: relative; border: 1px solid black; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); width:480px; height:360px;" class="animated delay-1s slow">Video stream not available.</video>
+              
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <button type="button" id="startbutton"  class="btn btn-light animated delay-2s" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); margin-left: 120px"> Click Picture </button>
+              
+
+                <!--<div class="form-group mt-0 align-items-center" align="center">
+                    <input type="file" class="filestyle" data-icon="true" onchange="readURL2(this);" />
+                    <button type="button" class="btn btn-dark"> Upload </button> 
+                  </div> -->
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>
+        
+        <canvas id="canvas" style="display: none"> </canvas>
+        
+        <div class="square"> 
+        
+          <div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-top: 170px; margin-left: 160px"> 
+        
+          <div class="content spread" style="width=500px; height=500px">
+            <section>
+              <div class="mt-5" style="text-align:center; width: 340px;">
+                
+
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+                
+                <img id="photo" class="animated delay-1s slow" alt="The screen capture will appear in this box" style="border: 1px solid black; box-shadow: 2px 2px 3px black; width:480px; height:360px;"/>
+            
+               <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                
+                
+                <button type="button" id="snapupld" class="btn btn-light animated delay-2s" onclick="auto_populate()" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); margin-left: 120px;"> Accept </button>
+                <script type="text/javascript">
+              function auto_populate()
+              {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        //this.response is what you're looking for
+                        // handler(this.response);
+                        console.log(this.response, typeof this.response);
+                        var img1 = document.getElementById('fimg1');
+                        var img2 = document.getElementById('mimg1');
+                        var url = window.URL || window.webkitURL;
+                        img1.src = url.createObjectURL(this.response);
+                        img2.src = url.createObjectURL(this.response);
+                    }
+                }
+                xhr.open('GET', "/static/photos/test/dumpling_first.jpg");
+                xhr.responseType = 'blob';
+                xhr.send(); 
+              }  
+              </script>
+                <!--<div class="form-group mt-0 align-items-center" align="center">
+                    <input type="file" class="filestyle" data-icon="true" onchange="readURL2(this);" />
+                    <button type="button" class="btn btn-dark"> Upload </button> 
+                  </div>-->
+
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>  
+        </div>
+        
+      </div>
+      
+          <div class="arrow bounce" style="width: 100px; height: 100px; position: absolute; left: 50%; margin-left: -50px; margin-top: 780px">
+          <a  class="fa fa-arrow-down fa-3x" onclick="disp2anim()" href="#display2"></a>
+          <!-- <h4> Please click here! </h4> -->
+        </div>
+
+      </div>
+
+        
+
+       </section> 
+
+   
+   <section id="display2" class="displaytwo" style="background-color: #23A6D5; height: 100vh;" style="background: url(static/images/hero-bg.jpg) top center; background-attachment: fixed;"> <!-- class="square-container mt-5"> -->
+      <br>
+      <br>
+      
+
+<h1 class="animated delay-1s slow" id="hdisp2" style="animation-duration: 2s; text-align: center;font-family: 'Bungee', cursive; font-size: 42px ;text-shadow: 0px 3px 0px /*#b2a98f*/ grey	,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); color: white">Choose image of the apparel you want</h1>
+        <div class="square">  <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+        
+          <div class="content spread" >
+            <section>
+              <div class="mt-5" style="text-align:center; margin-top: 5px">
+          
+                <br>
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+               
+                <img id="img2" src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" class="animated delay-1s slow" alt="apparel you want" style="width:240px; height:300px; margin-top: 40px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"/>
+              
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Image of apparel you want to try </b></p>
+                <br>
+                <div class="form-group mt-0 align-items-center animated delay-1s" id="btn2" align="center">
+                    <form method=POST enctype=multipart/form-data action="{{ url_for('upload2') }}">
+                    <label for="f2" class="btn btn-light" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);font-size:20px; margin-right: 180px; margin-top: 7.5px">Choose Image</label>	
+                    <input type="file" id="f2" name=photo style="display: none" capture=camera class="filestyle" data-icon="true" onchange="readURL2(this);" />
+                    <!--<button type="button" class="btn btn-dark"> Generate </button> -->
+                    <input type='submit' class='btn btn-light' style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); " value='Accept'>
+                    </form>
+                </div>
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div> 
+
+        <div class="arrow bounce" style="width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px; margin-top: 80px">
+          <a  class="fa fa-arrow-down fa-3x" href="#display3" onclick="disp3anim()" ></a>
+          <!-- <h4> Please click here! </h4> -->
+        </div>
+        
+       </section> 
+                
+      <section id="display3" class="displaythree" style="background-color: #23A6D5; height: 100vh">
+      	<br>
+      	<h1 class="animated delay-1s slow" id="hdisp3" style="animation-duration: 2s; text-align: center;font-family: 'Bungee', cursive; font-size: 42px ;text-shadow: 0px 3px 0px /*#b2a98f*/ grey	,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); color: white">Click on 'extract fitting' to generate outline of apparel</h1>
+              
+        <!-- <div> -->
+        <!-- <div> -->
+        	<div class="square" style="width: 400px; float:left; height:500px; margin:80px; margin-top: 30px; margin-left: 0px; margin-right: 0px"> <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+  				
+      			<div class="content" style="width=500px; height=500px">
+    				<section>
+    					<div class="mt-5" style="text-align:center">
+    						<br>
+    						<!--<span  class="glyphicon glyphicon-pencil"  style="font-size: 75px; color:red; "></span>-->
+    						<div>	
+    						<img id="mimg1" src="http://clipart-library.com/images/riLo4pBoT.jpg" alt="my image" class="animated delay-1s slow" style="width:240px; height:300px; margin-top: 40px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" />
+               <!-- http://www.see-it-3d.co.uk/demo/wp-content/uploads/2012/08/2016-11-10_11h28_13.png -->
+                </div>
+    						<div class="container mt-5 mb-5" style="margin-top: 1px;" >
+    						<!--<div style="margin-top: 5px;">	-->
+    							<p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"><b>Image you chose</b></p>
+    						</div>
+    					</div>		
+    				</section>
+            </div>
+        </div>
+    	
+        <div class="square" style="width: 500px; float:left; height:500px; margin:60px; margin-left: 0px; margin-top: 95px;"> 
+        	<div id="learned1" style="display:none; width: 65%; font-size: 20px; font-family: 'PT Sans', sans-serif; color: black; background-color: white; border-color: white; box-shadow: 0px 0px 50px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" class="alert alert-success container mb-5 animated wobble" >
+    					<strong>Learned outline of user image!</strong> 
+  				</div>
+        
+          <div class="content spread" style="width=500px; height=500px">
+            <section>
+              <div class="mt-5" style="text-align:center">
+                
+
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+                
+                <img id="img3" src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" class="animated delay-1s slow" alt="masked image" style="width:240px; height:300px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"/>
+              
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Mask of user image</b></p>
+              
+                <!--<button type="button" id="btn3" class="btn btn-dark animated delay-1s"> Generate Outline </button> -->
+                <div class="form-group mt-0 animated delay-1s" id='btn3'>
+                <form method="POST" action="{{ url_for('seg_one') }}">
+                  <a href=# id=test1 ><button  id='button1' class='btn btn-light' style="box-shadow: inset 0px 0px 10px  grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); font-size: 20px;">Extract fitting</button></a>
+                <!-- <input type='button' class='btn btn-dark' value="Generate Outline" > -->
+                </form>
+                <br>
+                <!-- <input type='button' class='btn btn-dark' value="Show"> -->
+                <button onclick="load_pehla(); learned1()" type="button" id='button2' class='btn btn-light' style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);">Display</button>
+                  <script type="text/javascript">
+                  function load_pehla()
+                  {
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function(){
+                        if (this.readyState == 4 && this.status == 200){
+                            //this.response is what you're looking for
+                            // handler(this.response);
+                            console.log(this.response, typeof this.response);
+                            var img = document.getElementById('img3');
+                            var url = window.URL || window.webkitURL;
+                            img.src = url.createObjectURL(this.response);
+                        }
+                    }
+                    xhr.open('GET', "/static/first_segmented.png");
+                    xhr.responseType = 'blob';
+                    xhr.send(); 
+                  }  
+                  </script>
+                </div>
+                <!--<div class="form-group mt-0 align-items-center" align="center">
+                    <input type="file" class="filestyle" data-icon="true" onchange="readURL2(this);" />
+                    <button type="button" class="btn btn-dark"> Upload </button> 
+                  </div> -->
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>
+        
+
+        
+        <!-- <div class="square"> --> 
+        
+        <div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-top: 0px; margin-left: 0px; margin-right: 0px">  <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+        
+          <div class="content spread" >
+            <section>
+              <div class="mt-5" style="text-align:center">
+          
+                <br>
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+               
+                <img id="mimg2" src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" class="animated delay-1s slow" alt="apparel you want" style="width:240px; height:300px; margin-top: 80px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"/>
+              
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Image of apparel you want to try </b></p>
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>
+
+          <div class="square" style="width: 440px; float:left; height:500px; margin:0px; margin-top: 100px; margin-left: 0px;"> 
+          	<div id="learned2" style="display:none; width: 80%; font-size: 20px; font-family: 'PT Sans', sans-serif; color: black; background-color: white; border-color: white; box-shadow: 0px 0px 50px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" class="alert alert-success container mb-5 animated wobble" >
+    					<strong>Learned outline of apparel image!</strong> 
+  				</div>
+        
+          <div class="content spread" style="width=500px; height=500px">
+            <section>
+              <div class="mt-5" style="text-align:center">
+                
+                
+                <img id="img4" src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" class="animated delay-1s slow" alt="masked image" style="width:240px; height:300px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"/>
+            
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Mask of apparel image</b></p>
+            
+                <!--<button type="button" id="btn4" class="btn btn-dark animated delay-1s"> Generate Outline </button> -->
+                <div class="form-group mt-0 animated delay-1s" id='btn4'>
+                <form action="{{ url_for('seg_two') }}" method="POST">
+                  <!-- <input type='button' class="btn btn-dark" value="Generate Outline"> -->
+                  <a href=# id=test2><button id='button3' class='btn btn-light' style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); font-size: 20px;">Extract fitting</button></a>
+                </form> 
+                <br>
+                  <!-- <input type="button" class="btn btn-dark" value="Show"> -->
+                  <button onclick="load_doosra(); learned2()" id='button4' type="button" class='btn btn-light' style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);">Display</button>
+                  <script type="text/javascript">
+                  function load_doosra()
+                  {
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function(){
+                        if (this.readyState == 4 && this.status == 200){
+                            //this.response is what you're looking for
+                            // handler(this.response);
+                            console.log(this.response, typeof this.response);
+                            var img = document.getElementById('img4');
+                            var url = window.URL || window.webkitURL;
+                            img.src = url.createObjectURL(this.response);
+                        }
+                    }
+                    xhr.open('GET', "/static/second_segmented.png");
+                    xhr.responseType = 'blob';
+                    xhr.send(); 
+                  }  
+                  </script>
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>  
+        <!-- </div> -->
+        <br>
+        <br>
+        <div style="position: absolute; left: 49.5%; margin-left: -72px; margin-top: 617px">
+ <!--      <button type="button" id="btn5" class="btn btn-dark animated delay-2s"> Generate Result</button>
+ -->
+      <form action="{{ url_for('generate') }}" method="POST">
+        <a href=# id=test3>
+          <button id='btn5' class='btn btn-light animated delay-2s' style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); font-size: 20px;">Generate style</button>
+        </a>
+      </form>
+      </div>
+      <!-- </div> -->
+      
+        <div class="arrow bounce" style="width: 100px; height: 100px; position: absolute; left: 50%; margin-left: -50px; margin-top: 703px">
+          <a  class="fa fa-arrow-down fa-3x" onclick="disp4anim();" href="#display4"></a>
+          <!-- <h4> Please click here! </h4> -->
+        </div>
+
+      <!-- </div> -->
+                
+      
+      </section>
+    
+      <section id="display4" class="displayfour" style="background-color: #23A6D5; height: 100vh">
+      	<br>
+      	<br>
+      	<h1 class="animated delay-1s slow" id="hdisp4" style="animation-duration: 2s; text-align: center;font-family: 'Bungee'; font-size: 42px ;text-shadow: 0px 3px 0px /*#b2a98f*/ grey	,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); color: white">Display your image with the desired apparel</h1>
+  	 
+
+      	<div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-top: 60px"> <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+  				
+      			<div class="content" style="width=500px; height=500px">
+    				<section>
+    					<div class="mt-5" style="text-align:center">
+    						<br>
+    						<!--<span  class="glyphicon glyphicon-pencil"  style="font-size: 75px; color:red; "></span>-->
+    						<div>	
+    						<img id="fimg1" src="http://clipart-library.com/images/riLo4pBoT.jpg" alt="my image" class="animated delay-1s slow" style="width:240px; height:300px; margin-top: 40px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" />
+               <!-- http://www.see-it-3d.co.uk/demo/wp-content/uploads/2012/08/2016-11-10_11h28_13.png -->
+                </div>
+    						<div class="container mt-5 mb-5" style="margin-top: 1px;" >
+    						<!--<div style="margin-top: 5px;">	-->
+    							<p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"><b>Image you chose</b></p>
+    						</div>
+    					</div>		
+    				</section>
+            </div>
+    		
+    	</div>
+
+    	<div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-top: 20px; margin-left: 1px">  <!-- style="width: 500px; float:left; height:500px; margin:100px"> -->
+        
+          <div class="content spread" >
+            <section>
+              <div class="mt-5" style="text-align:center">
+          
+                <br>
+                <!--<span  class="glyphicon glyphicon-star"  style="font-size: 75px; color: blue; "></span>-->
+               
+                <img id="fimg2" src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" class="animated delay-1s slow" alt="apparel you want" style="width:240px; height:300px; margin-top: 80px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);"/>
+              
+              <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Image of apparel you want to try </b></p>
+              </div>  
+              </div>
+            </section>  
+          </div>  
+        </div>
+
+
+
+
+
+
+  	 <div class="square" style="width: 500px; float:left; height:500px; margin:100px; margin-top: 50px; margin-left: 1px">
+      
+    	<div class="content column">
+    		<section>
+    			<div class="mt-5" style="text-align:center">
+    				
+            
+    				<!--<span  class="glyphicon glyphicon-ok"  style="font-size: 75px; color: green; "></span>-->
+           
+    				<img src="http://www.clker.com/cliparts/9/n/M/p/K/T/t-shirt-template-blue-md.png" style="width:240px; height:300px; margin-top: 80px; box-shadow: 0px 0px 31px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);" id="img5" class="animated delay-1s slow"/>
+                 <div class="container mt-5 mb-0" style="margin-top: 1px;">
+                <!--<div style="margin-top: 5px;">  -->
+                <p class="mt-5" align="center" style="font-family: 'PT Sans', sans-serif; font-size: 20px"> <b>Image of yourself with desired apparel </b></p>
+              </div>
+            
+    			<br>
+    			  <button onclick = "success(); load_teesra()" type="button" id="btn6" class="btn btn-light animated delay-1s" style="box-shadow: inset 0px 0px 10px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); "> Magic! </button>
+                 <br>
+                 <br>  
+                 <div id="success" style="display:none; width: 50%; font-size: 18px; font-family: 'PT Sans', sans-serif; color: black; background-color: white; border-color: white; box-shadow: 0px 0px 50px /*#b2a98f*/ grey,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1); margin-top: 20px; font-size: 20px;" class="alert alert-success container mb-5 animated wobble" >
+    					<strong>You look awesome!</strong> 
+  					</div>
+          <script type="text/javascript">
+          function load_teesra()
+          {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    //this.response is what you're looking for
+                    // handler(this.response);
+                    console.log(this.response, typeof this.response);
+                    var img = document.getElementById('img5');
+                    var url = window.URL || window.webkitURL;
+                    img.src = url.createObjectURL(this.response);
+                }
+            }
+            xhr.open('GET', "/static/result_final.png");
+            xhr.responseType = 'blob';
+            xhr.send(); 
+          }  
+          </script>
+    		
+    				
+    			</div> 
+    		</section>	
+		</div>
+  	</div>
+    
+     </section>
+
+  
+
+
+<!--==========================
+    Call To Action Section
+    ============================-->
+   <!-- <section id="call-to-action" style="background: url(static/images/call-to-action-bg.jpg) top center; ">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Please contact us if you find any issues.</p>
+          </div>
+          <!-- <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div> -->
+        <!--</div>
+
+      </div>
+    </section>#call-to-action -->
+
+  <!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Team</h3>
+          <!--<p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> -->
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="member">
+              <!-- <div class="pic"><img src="img/team-1.jpg" alt=""></div> -->
+              <h4>Abhuday Vibhanshu</h4>
+              <span>Developer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="member">
+              <!-- <div class="pic"><img src="img/team-2.jpg" alt=""></div> -->
+              <h4>Danish Sultan</h4>
+              <span>Developer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="member">
+              <!-- <div class="pic"><img src="img/team-3.jpg" alt=""></div> -->
+              <h4>Bishesh Sinha</h4>
+              <span>Developer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/team-4.jpg" alt=""></div>
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </section><!-- #team -->
+</main>
+
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <!--<div class="copyright">
+        &copy; Copyright <strong>Virtual Try-On</strong>. All Rights Reserved
+      </div> -->
+      <div class="copyright">
+        <strong> Vestment </strong>
+       </div> 
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+        -->
+        Designed by <a>PW19HLP02</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#hero" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+</body>
+</html>
